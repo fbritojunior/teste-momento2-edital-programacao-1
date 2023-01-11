@@ -5,18 +5,14 @@ Por exemplo, na posição [1][2] você deverá armazenar o valor 1+2 = 3 e assim
 Imprima a matriz na tela.
 """
 
-import numpy as np
+mat = []
+n = 3
+  
+for row in range(1, n+1):
+	itens = []
+	for col in range (1, n+1):
+		itens.append(row + col)
 
-mat = np.array(np.zeros((3, 3), dtype=int))
+	mat.append(itens)
 
-"""
-for l in range(1, 4):
-    for c in range(1, 4):
-        mat[l-1, c-1] = l + c
-"""
-
-for l in range(1, 4):
-    for c in range(1, 4):
-        mat[l-1, c-1] = l + c
-
-print(mat, sep=",")
+print('A matriz 3 x 3: ', mat, end='')
